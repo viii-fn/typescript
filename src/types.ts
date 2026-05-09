@@ -167,3 +167,19 @@ class Car extends Vehicle {
         this.transmission = transmission;
     }
 }
+
+const myBmw = new Car ('red', 4, 'BMW M8 Competition', 'Auto & Manual');
+
+myBmw.drive(280);
+
+// Overrides
+
+class RaceCar extends Car {
+    override warning(): void {
+        console.log('Exceeding speed limit');
+    }
+}
+
+const myPagani = new RaceCar('black', 4, 'Huayra BC', 'Auto & Manual');
+
+myPagani.warning();
