@@ -183,3 +183,39 @@ class RaceCar extends Car {
 const myPagani = new RaceCar('black', 4, 'Huayra BC', 'Auto & Manual');
 
 myPagani.warning();
+
+
+// Value Modfiers 
+
+class NewUser {
+    readonly id: number
+    name: string
+    picture?: string
+
+    constructor(id: number, name: string, picture?: string) {
+        this.id = id;
+        this.name = name;
+        if (picture) {
+            this.picture = picture;
+        }
+    }
+}
+
+
+// Visibily / Access modfiers
+
+class PrivateUser {
+    private _name: string
+
+    constructor(name: string) {
+        this._name = name;
+    }
+
+    getName() {
+        return this._name;
+    }
+}
+
+const elvis = new PrivateUser('Elvis');
+
+elvis.getName();
