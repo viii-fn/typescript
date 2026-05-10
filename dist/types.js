@@ -148,4 +148,7 @@ class MixedUser {
         this._age = _age;
     }
 }
+class paramUser {
+}
+const paramElvis = new paramUser('Elvis', 1, 18);
 //# sourceMappingURL=types.js.map

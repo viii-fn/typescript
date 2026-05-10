@@ -278,8 +278,8 @@ class paramUser {
     constructor(
         public name: string,
         readonly id: number,
-        private _age: numeber;
-    )
-}
+        private _age: number
+    ) {}
+};
 
-const paramElvis = new paramUser('Elvis', 1, 18)
+const paramElvis = new paramUser('Elvis', 1, 18);
