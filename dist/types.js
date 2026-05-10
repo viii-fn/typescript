@@ -108,14 +108,37 @@ class NewUser {
     }
 }
 // Visibily / Access modfiers
+// Private Modifier
+//The private modifier is used to make properties and methods accessible only from the class itself.
 class PrivateUser {
     constructor(name) {
         this._name = name;
     }
-    getName() {
-        return this._name;
+}
+class PrivateExtending extends PrivateUser {
+    constructor(_name, name) {
+        super(_name);
+        this.name = name;
     }
 }
 const elvis = new PrivateUser('Elvis');
-elvis.getName();
+const elvis2 = new PrivateExtending('irhaye', 'elvis');
+// Protected Modifier
+// The protected modifier makes a property or a class accessible from the class and all its child classes, but not from outside:
+class ProtectedUser {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class Account extends ProtectedUser {
+    constructor(name, email) {
+        super(name);
+        this.email = email;
+    }
+    getUsername() {
+        return this.name;
+    }
+}
+const protectedUser = new Account('Elvis', 'irhayeelvisebah@gmail.com');
+// console.log(protectedUser.name)  ---  this will throw and error to the compiler -- "Property 'name' is protected and only accessible within class 'ProtectedUser' and its subclasses."
 //# sourceMappingURL=types.js.map
