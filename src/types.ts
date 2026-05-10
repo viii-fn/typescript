@@ -226,7 +226,7 @@ class PrivateExtending extends PrivateUser {
     // getName() {
     //     return this._name;
     // }
-    // this will throw an error
+    // this will throw an error -- "Property '_name' is private and only accessible within class 'PrivateUser'."
 }
 
 const elvis = new PrivateUser('Elvis');
@@ -261,3 +261,15 @@ class Account extends ProtectedUser {
 const protectedUser = new Account('Elvis', 'irhayeelvisebah@gmail.com');
 
 // console.log(protectedUser.name)  ---  this will throw and error to the compiler -- "Property 'name' is protected and only accessible within class 'ProtectedUser' and its subclasses."
+
+class MixedUser {
+    readonly id: number
+    name: string
+    private _age: number
+
+    constructor(id: number, name: string, _age: number) {
+        this.id = id;
+        this.name = name;
+        this._age = _age;
+    }
+}
