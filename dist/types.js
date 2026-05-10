@@ -148,7 +148,14 @@ class MixedUser {
         this._age = _age;
     }
 }
+// Parameters. Having strong knowledge in both C# and Javascript is making this too easy. No need for explanation
 class paramUser {
+    constructor(name, id, _age) {
+        this.name = name;
+        this.id = id;
+        this._age = _age;
+    }
 }
+;
 const paramElvis = new paramUser('Elvis', 1, 18);
 //# sourceMappingURL=types.js.map

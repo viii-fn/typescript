@@ -274,6 +274,9 @@ class MixedUser {
     }
 }
 
+
+// Parameters. Having strong knowledge in both C# and Javascript is making this too easy. No need for explanation
+
 class paramUser {
     constructor(
         public name: string,
