@@ -273,3 +273,13 @@ class MixedUser {
         this._age = _age;
     }
 }
+
+class paramUser {
+    constructor(
+        public name: string,
+        readonly id: number,
+        private _age: numeber;
+    )
+}
+
+const paramElvis = new paramUser('Elvis', 1, 18)

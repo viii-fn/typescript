@@ -141,4 +141,11 @@ class Account extends ProtectedUser {
 }
 const protectedUser = new Account('Elvis', 'irhayeelvisebah@gmail.com');
 // console.log(protectedUser.name)  ---  this will throw and error to the compiler -- "Property 'name' is protected and only accessible within class 'ProtectedUser' and its subclasses."
+class MixedUser {
+    constructor(id, name, _age) {
+        this.id = id;
+        this.name = name;
+        this._age = _age;
+    }
+}
 //# sourceMappingURL=types.js.map
