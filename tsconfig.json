@@ -15,6 +15,10 @@
     // "types": ["node"],
     // and npm install -D @types/node
 
+    // Javascript Conversion Options
+    "allowJs": true,
+    "checkJs": true,
+
     // Other Outputs
     "sourceMap": true,
     "declaration": true,

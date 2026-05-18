@@ -59,3 +59,55 @@ export function sum(x: number, y: number) {
 // Importing
 // import { sum } from "./helper";
 // sum(1, 2);
+
+
+// Type assertion using the 'as' operator
+
+const inputElement2 = document.querySelector('#input') as HTMLInputElement;
+
+console.log(inputElement2.value);
+
+// This operator is commonly used when you meet a variable of any type, such as when receiving a response from the fetch API call:
+
+fetch('https://abc.com')
+    .then(response => response.json())
+    .then(data => {
+        //...
+    });
+
+// If you know the exact data type of the returned DataTransfer, create a type for the data then call the 'as' operator to assert the data variable like this
+
+type Task = {
+    id: number;
+    title: string;
+};
+
+fetch('https://abc.com')
+    .then(response => response.json())
+    .then(data => {
+        (data as Task).title;
+    });
+
+
+// Discriminating Unions
+// Network request simulation
+
+type successResponse = {
+    state:'success';
+    data: { title: string };
+};
+
+type failResponse = {
+    state: 'failed';
+    error: { message: string };
+};
+
+type ApiResponse = successResponse | failResponse;
+
+function handleResponse(res: ApiResponse) {
+    if (res.state === 'success') {
+        console.log(res.data.title);
+    } else {
+        console.log(res.error.message);
+    }
+}
