@@ -26,3 +26,10 @@ function getData<T>(url: string): Result<T> {
         error: null
     }
 }
+
+class KeyValuePair<T> {
+    constructor(public key: T, public value: T ) {}
+}
+
+const pairOne = new KeyValuePair<string>('name', 'Nathan');
+const pairTwo = new KeyValuePair<number>(1, 2);
