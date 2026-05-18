@@ -1,6 +1,4 @@
-"use strict";
 // Classes and OOP
-Object.defineProperty(exports, "__esModule", { value: true });
 class Vehicle {
     constructor(color, wheels) {
         this.color = color;
@@ -127,4 +125,5 @@ class Square2 extends Shape {
         return Math.pow(this.size, 2);
     }
 }
+export {};
 //# sourceMappingURL=classes.js.map

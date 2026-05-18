@@ -1,6 +1,4 @@
-"use strict";
 // Object shapes with types
-Object.defineProperty(exports, "__esModule", { value: true });
 const sender = {
     id: 1,
     name: 'Elvis'
@@ -63,4 +61,5 @@ var Sizes;
 console.log(Sizes.Small);
 console.log(Sizes.Medium);
 console.log(Sizes.Large);
+export {};
 //# sourceMappingURL=types.js.map

@@ -27,9 +27,38 @@ function getData<T>(url: string): Result<T> {
     }
 }
 
-class KeyValuePair<T> {
-    constructor(public key: T, public value: T ) {}
+class KeyValuePair<T, U> {
+    constructor(public key: T, public value: U) {}
 }
 
-const pairOne = new KeyValuePair<string>('name', 'Nathan');
-const pairTwo = new KeyValuePair<number>(1, 2);
+const pairOne = new KeyValuePair<string, number>('age', 18);
+const pairTwo = new KeyValuePair<string, boolean>('successful', true);
+
+class ArrayHelper {
+    static createArray<T>(value: T) {
+        return [value];
+    }
+}
+
+ArrayHelper.createArray<string>('Elvis');
+ArrayHelper.createArray<number>(18);
+
+
+// simulation of fetching data from a HTML input
+
+const inputElement = document.querySelector<HTMLInputElement>('#input');
+inputElement?.value;
+
+
+// Modules in ts 
+
+// Export a function
+// Export the function
+function sum(x: number, y: number) {
+    return x + y;
+}
+exports.sum = sum;
+
+// Import the function
+const { sum } = require("./helper");
+sum(1, 2)
