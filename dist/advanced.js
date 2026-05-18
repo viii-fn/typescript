@@ -33,14 +33,11 @@ ArrayHelper.createArray(18);
 const inputElement = document.querySelector('#input');
 inputElement === null || inputElement === void 0 ? void 0 : inputElement.value;
 // Modules in ts 
-// Export a function
-// Export the function
-function sum(x, y) {
+//  Exporting
+export function sum(x, y) {
     return x + y;
 }
-exports.sum = sum;
-// Import the function
-const { sum } = require("./helper");
-sum(1, 2);
-export {};
+// Importing
+// import { sum } from "./helper";
+// sum(1, 2);
 //# sourceMappingURL=advanced.js.map

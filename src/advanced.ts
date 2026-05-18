@@ -51,14 +51,11 @@ inputElement?.value;
 
 
 // Modules in ts 
-
-// Export a function
-// Export the function
-function sum(x: number, y: number) {
+//  Exporting
+export function sum(x: number, y: number) {
     return x + y;
 }
-exports.sum = sum;
 
-// Import the function
-const { sum } = require("./helper");
-sum(1, 2)
+// Importing
+// import { sum } from "./helper";
+// sum(1, 2);
